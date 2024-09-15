@@ -82,15 +82,17 @@
                 <span class="price">$50</span>
                 <i class='bx bxs-cart add-cart'></i>
             </div>  -->
-            <div class="product-box">
-                {% for p in my_products%}
-                <img src="{{p.image.url}}" alt="" class="product-img">
-                <h2 class="product-title">{{p.title}}</h2>
-                <div class="price">{{p.price}}</div>
-                <i class='bx bxs-cart add-cart'></i>
-                <!-- <i class="fa-solid fa-cart-shopping" id="cart_add"></i> -->
+            <div class="products-container">
+                {% for p in my_products %}
+                <div class="product-box">
+                    <img style="border-radius: 10px;" width="180px" src="{{ p.image.url }}" alt="" class="product-img">
+                    <h2 class="product-title">{{ p.title }}</h2>
+                    <div class="price">{{ p.price }}</div>
+                    <i class='bx bxs-cart add-cart'></i>
+                </div>
                 {% endfor %}
             </div>
+            
         </div>
 
     </section>

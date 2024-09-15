@@ -35,7 +35,7 @@ figure{
     width: 100%;
 }
 section{
-    padding: 64px 0 48px;
+    padding: 6px 0 48px;
     color: gold;
     text-align: center;
 }
@@ -164,6 +164,7 @@ header{
 }
 .shop{
     margin-top: 32px;
+    padding: 20px;
 }
 /* shop content*/
 .shop-content{
@@ -171,36 +172,41 @@ header{
     grid-template-columns: repeat(auto-fit, minmax(300px,auto));
     gap: 24px;
 } 
-.product-box{
-    position: relative;
-}
-.product-box:hover{
-    padding: 10px;
-    border: 1px solid gold; 
-    transition: 0.2s;
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the spacing between items */
 }
 
-.product-title{
-    font-size: 17px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-.price{
-    font-weight: 500;
-    font-size: 24px;
-}
-.add-cart{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.product-box {
+    border: 5px solid #ccc; /* Add a border if needed */
     padding: 10px;
-    cursor: pointer;
-    background: var(--text-color);
-    color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(17, 17, 14); /* Optional: Add shadow for better appearance */
+    width: 200px; /* Adjust width as needed */
 }
-.add-cart:hover{
-    background: black;
+.product-box :hover{
+    transition: 0.2s;
+}
+.product-img {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin: 10px 0; /* Add space between title and price */
+}
+
+.price {
+    font-size: 1.1em;
+    color:gold; /* Adjust color as needed */
+}
+
+.add-cart {
+    cursor: pointer;
+    font-size: 1.5em;
+    color:gold; /* Adjust color as needed */
 }
 
 /* logins */
