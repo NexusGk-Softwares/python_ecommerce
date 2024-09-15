@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+<h1>Register</h1>
+    <form action="" method="post"id="fom"> 
+        {% csrf_token%}
+        {{form.as_p}}
+        <label for="Name">Name</label>
+        <input type="Name" id="User" placeholder="Enter your name"><br><br>
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="Enter your email"><br><br>
+        <label for="Password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password"><br><br>
+        <label for="number">Mobile No</label>
+        <input type="number" id="number" placeholder="Enter yor Number"><br><br>
+        <h5>Select Gender</h5>
+        <label for="Male">Male</label>
+        <input type="radio" id="Male" value="Male" name="Gender"><br><br>
+        <label for="Female">Female</label>
+        <input type="radio" id="Female" value="Female" name="Gender"><br><br>
+        <label for="date">Date of birth</label>
+        <input type="date" id="date" placeholder="Enter your date of birth"><br><br>
+        <button value="submit">Register</button><br><br> 
+        <a href="{% url 'index' %}">Proceed to shopping</a>
+    </form>
+    
+</body>
+</html>

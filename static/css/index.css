@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 32px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color:red;
+    --text-color:gold;
+    --bg-color: white;
+}
+body{
+    background-image: url(yy.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h2{
+    color:gold;
+}
+figure{
+    position:relative;
+    float:inline-start;
+   
+    padding-left: 30px;    
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+section{
+    padding: 64px 0 48px;
+    color: gold;
+    text-align: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 1px 4px hsl(0 4% 15%/ 10%);
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px ;
+}
+.logo{
+    font-size: 24px;
+    color: gold;
+    font-weight: 300;
+}
+#cart-icon{
+    color: gold;
+    font-size: 28px;
+    cursor: pointer;
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    box-shadow: -2px 0 4px hsl(0 4% 15%/ 10%);
+    background: var(--bg-color);
+    transition: 0.3s;
+}
+.cart.active{
+    right: 0;
+}
+.cart-title{
+    text-align:center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top:32px;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 8px;
+}
+.cart-product-title{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.cart.price{
+    font-weight: 500;
+}
+.cart-quantity{
+    border: 1px solid gold;
+    outline-color: red;
+    width: 36px;
+    text-align: center;
+    font-size: 16px;
+}
+.cart-remove{
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content:flex-end ;
+    margin-top: 24px;
+    border-top: 1 px solid blue; 
+}
+.total-title{
+    font-size: 16px;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 8px;
+}
+.btn-buy{
+    display: flex;
+    margin: 24px auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: white;
+    color: gold;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-buy:hover{
+    background:gray;
+}
+#close-cart{
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    font-size: 16px;
+    color: gold;
+    cursor: pointer;
+}
+.selection-title{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.shop{
+    margin-top: 32px;
+}
+/* shop content*/
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    gap: 24px;
+} 
+.product-box{
+    position: relative;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid gold; 
+    transition: 0.2s;
+}
+
+.product-title{
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.price{
+    font-weight: 500;
+    font-size: 24px;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+.add-cart:hover{
+    background: black;
+}
+
+/* logins */
+h1{
+    color: gold;
+    text-align: center;
+}
+#fom {
+    color: gold;
+    position: relative;
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:#E3eeef;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+#user-x{
+    color: gold;
+    font-size:20px ;
+}
+
+@media (max-width:1080px){
+    .nav{
+        padding: 15px;
+    }
+    section{
+        padding: 48px 0 16px; 
+    }
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .shop{
+        margin-top: 32px;
+    }
+}

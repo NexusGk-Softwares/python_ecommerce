@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Sounds</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/5f6453ff01.js" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Quality Sounds</a>y
+            <a href="login.html"><i class='bx bxs-user' id="user-x"></i></a>
+            <i class='bx bxs-cart-alt' id="cart-icon"></i>
+
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+
+                <div class="cart-content">
+                    
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                
+                <button type="button" class="btn-buy">Buy Now</button>
+
+                <i class='bx bx-x' id="close-cart"></i>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container ">
+        <h2 class="section-title">Shop products</h2>
+        <div class="shop-content">
+
+            <!-- <div class="product-box">
+                <img src="images\Earphones\Realme.png" alt="" class="product-img" width="300px" height="300px">
+                <h2 class="product-title">realme</h2>
+                <span class="price">$25</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="images\Earphones\Oraimo.jpg" alt="" class="product-img" width="300px">
+                <h2 class="product-title">Oraimo</h2>
+                <span class="price">$45</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="images\Earphones\oppo.jpg" alt="" class="product-img" width="300px" height="300px">
+                <h2 class="product-title">Oppo</h2>
+                <span class="price">$40</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="images\Earphones\Awei.jpg" alt="" class="product-img" width="300px">
+                <h2 class="product-title">Awei</h2>
+                <span class="price">$30</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+
+            <div class="product-box">
+                <img src="images\Earphones\Budi.jpg" alt="" class="product-img" width="300px">
+                <h2 class="product-title">Budi</h2>
+                <span class="price">$20</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+
+            <div class="product-box"> 
+                <img src="images\Earphones\samsung.jpg" alt="" class="product-img" width="300px">
+                <h2 class="product-title">Samsung </h2>
+                <span class="price">$50</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>  -->
+            <div class="product-box">
+                {% for p in my_products%}
+                <img src="{{p.image.url}}" alt="" class="product-img">
+                <h2 class="product-title">{{p.title}}</h2>
+                <div class="price">{{p.price}}</div>
+                <i class='bx bxs-cart add-cart'></i>
+                <!-- <i class="fa-solid fa-cart-shopping" id="cart_add"></i> -->
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+    <script type="text/javascript"  src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
